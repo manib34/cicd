@@ -1,0 +1,11 @@
+project:
+  name: ebs
+  regions:
+  - us-east-1
+tests:
+  default:
+    template: ./ebs.yml
+    parameters:
+      AvailabilityZone: us-east-1a
+      DiskSize: 10
+      VolumeType: gp2

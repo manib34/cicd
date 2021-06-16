@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Testing CI/CD
+Parameters: 
+  AvailabilityZone:
+    Description: Choose the AZ
+    Type: AWS::EC2::AvailabilityZone::Name
+    Default: us-east-1a
+  DiskSize:
+    Description: Enter the disk size
+    Default: 10
+    Type: Number
+  VolumeType:
+    Description: Define the volume type
+    Default: gp2
+    Type: String
+Resources:
+  ec2Volume:
+    Type: AWS::EC2::Volume
+    Properties:
+      AvailabilityZone: !Ref AvailabilityZone
+      Size: !Ref DiskSize
+      VolumeType: !Ref VolumeType
+      Tags:
+        - Key: env
+          Value: dev
+Outputs:
+  VolumeID:
+    Description: The volume id
+    Value: !Ref ec2Volume
