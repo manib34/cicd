@@ -1,0 +1,10 @@
+[{
+    "ParameterKey": "AvailabilityZone",
+    "ParameterValue": "us-east-1a"
+}, {
+    "ParameterKey": "DiskSize",
+    "ParameterValue": "10"
+}, {
+    "ParameterKey": "VolumeType",
+    "ParameterValue": "gp2"
+}]
