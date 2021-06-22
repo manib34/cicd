@@ -22,7 +22,7 @@ Resources:
       VolumeType: !Ref VolumeType
       Tags:
         - Key: env
-          Value: Prod
+          Value: impaired
 Outputs:
   VolumeID:
     Description: The volume id
